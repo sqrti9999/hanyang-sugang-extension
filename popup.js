@@ -1,5 +1,5 @@
 // When the button is clicked, inject hoverHandler into current page
-changeColor.addEventListener("click", async () => {
+addHandler.addEventListener("click", async () => {
   let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 
   // Inject stylesheet
@@ -28,7 +28,7 @@ function injectTooltip(){
 
 
     // If there is no preceeding element, make tooltip
-    if (document.getElementsByClassName("hyextension_tooltip").length == 0){
+    if (document.getElementsByClassName("hyextension_tooltip").length === 0){
       /*
         Fetch infos
       */
