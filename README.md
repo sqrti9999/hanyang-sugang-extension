@@ -30,7 +30,7 @@
 > Whale 브라우저는 몇가지 수정할 부분이 있어서, 미뤄질 것 같습니다 ㅠㅠ
 
 #### 직접 설치하기 (Chrome)
-1. [Release](./release) 폴더에 있는 [hanyang-sugang-extension.zip](./release/hanyang-sugang-extension.zip) 파일을 다운받은 후 압축을 해체해주세요.
+1. [Release](./release) 폴더에 있는 [hanyang-sugang-extension.zip](./release/chrome/hanyang-sugang-extension.zip) 파일을 다운받은 후 압축을 해체해주세요.
 2. 브라우저에서  `chrome://extensions`로 들어간 후, 개발자 모드 사용을 켜주세요   
 3. `압축해제된 확장 프로그램을 로드합니다`를 눌러 설치를 완료해주세요
 
