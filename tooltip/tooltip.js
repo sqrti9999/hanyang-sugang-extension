@@ -1,5 +1,5 @@
 /****
-  Code in this file will be inserted in the page
+  Code in this file will be inserted in the page via `popup.js`
 ****/
 
 function addTooltip(row){
@@ -13,12 +13,13 @@ function addTooltip(row){
     /*
       Fetch infos
     */
+    // FIXME: 기본수업 페이지 대응
+
     var body = {
-       "strSuupYear": "2022",
-       "strSuupTerm": "10",
+       "strSuupYear": document.getElementById("cbYear").value,
+       "strSuupTerm": document.getElementById("cbTerm").value,
        "strSuupNo": row.children.suupNo2.textContent
     };
-    // TODO: Year/semester selecting option
 
     // 성적산출
     var gradeMethodText = '';
@@ -79,14 +80,18 @@ function addTooltip(row){
 
     // Make tooltip contents
     // TODO: Use Vue template
-    tooltip.innerHTML = `<h1> <b>${row.children.gwamokNm.textContent}</b>
-    (${row.children.daepyoGangsaNm.textContent})</h1><br />
+    tooltip.innerHTML = `<p><b style:"text-align: center;">${row.children.gwamokNm.textContent}</b>
+    (${row.children.daepyoGangsaNm.textContent} /
+      ${row.children.suupTimes.innerHTML.replace(/\([0-9:-]+\)/g, '<span style="font-size: 7px;">$&</span>').split('<br>').join(' | ')})</p>
+
+    <p>
     <li> 대상학과 : <b>${row.children.banSosokNm.textContent}</b> </li>
-    <li> 강좌유형 : <b>${row.children.suupTypeNm.textContent}</b> </li>
-    <li> 성적산출 : ${gradeMethodText}</li>
-    <br /><br />
-    <p> 이수제한 </p><br />
-    ${applyLimitText}`;
+    <li> 강좌유형 : <b>${row.children.suupViewtypeNm.textContent}(${row.children.suupTypeNm.textContent})</b> </li>
+    <li> 성적산출 : <b>${gradeMethodText}</b></li>
+    </p>
+
+    <p><i> 이수제한 </i><br />
+    ${applyLimitText}</p>`;
 
     // Add element
     document.body.appendChild(tooltip);
@@ -94,7 +99,7 @@ function addTooltip(row){
 }
 
 function removeTooltip(row){
-  if (document.getElementsByClassName("hyextension_tooltip").length != 0){
+  if (document.getElementsByClassName("hyextension_tooltip").length !== 0){
     document.body.removeChild(document.body.lastChild);
   }
 }

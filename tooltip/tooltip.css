@@ -1,9 +1,27 @@
 .hyextension_tooltip {
   position: absolute;
-  background-color: rgba( 186, 147, 41, 0.9 );
-  box-shadow: 0 0 0 2px white,
-              0 0 0 4px black;
   z-index: 10;
-  border:1px solid;
-  white-space:nowrap;
+
+  background-color: white;
+  box-shadow: 10px 10px 5px gray;
+  outline: #0E4A84 solid 5px;
+
+  white-space: nowrap;
+  font-size: 20px;
+  color: black;
+
+  padding: 10px 5%;
+}
+
+.hyextension_tooltip li {
+  line-height: 170%;
+  color: gray;
+}
+
+.hyextension_tooltip b {
+  color: black;
+}
+
+.hyextension_tooltip p {
+  margin-bottom: 10px;
 }
