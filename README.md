@@ -10,13 +10,13 @@
 
 ## Features
 
-// TODO
+// TODO: Edit README
 
 ## How-to
 
-// TODO
+// TODO: Edit README
 
-### 설치 
+### 설치
 
 > Chrome 웹 스토어 심사는 대기중입니다!   
 > Whale 브라우저는 몇가지 수정할 부분이 있어서, 미뤄질 것 같습니다 ㅠㅠ
@@ -29,8 +29,7 @@
 
 ## Contribution
 
-// TODO
+// TODO: Edit README
 
 컨트리뷰션은 언제나 환영입니다!   
 ~~코드 개판인거는... 빨리 다시 짤게요~~
- 

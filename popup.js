@@ -37,7 +37,7 @@ function injectTooltip(){
          "strSuupTerm": "10",
          "strSuupNo": row.children.suupNo2.textContent
       };
-      // TODO 페이지에서 년도/학기 대응
+      // TODO: Year/semester selecting option
 
       // 성적산출
       var gradeMethodText = '';
@@ -53,7 +53,7 @@ function injectTooltip(){
       xhr1.open("POST",
                 "https://portal.hanyang.ac.kr/sugang/SuscAct/findSuupSugangDetailInfo.do",
               false);
-      // TODO 비동기 XHR로 고치고 Fetch 후에 종료하도록 수정 (Promise?)
+      // FIXME: Use asynchronous fetch, not blocking fetch (await or promise?)
       xhr1.setRequestHeader('Content-Type', 'application/json+sua');
       xhr1.send(JSON.stringify(body));
 
@@ -82,8 +82,8 @@ function injectTooltip(){
       xhr2.setRequestHeader('Content-Type', 'application/json+sua');
       xhr2.send(JSON.stringify(body));
 
-      // TODO 강의계획서 -> 성적비율, 시험횟수
-      // TODO 에타 -> 평점확인
+      // TODO: syllabus -> assignments, exam schedules
+      // TODO: everytime -> class score / recent comment
 
       /*
         Make tooltip element and insert element
@@ -97,6 +97,7 @@ function injectTooltip(){
       tooltip.setAttribute("style", `top:${cursor_y}px; left:${cursor_x}px;`);
 
       // Make tooltip contents
+      // TODO: Use Vue template
       tooltip.innerHTML = `<h1> <b>${row.children.gwamokNm.textContent}</b>
       (${row.children.daepyoGangsaNm.textContent})</h1><br />
       <li> 대상학과 : <b>${row.children.banSosokNm.textContent}</b> </li>
