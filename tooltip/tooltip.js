@@ -88,8 +88,6 @@ function addTooltip(row){
     <p> 이수제한 </p><br />
     ${applyLimitText}`;
 
-    console.log(tooltip.innerHTML);
-
     // Add element
     document.body.appendChild(tooltip);
   }
